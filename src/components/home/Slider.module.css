@@ -1,0 +1,95 @@
+.slider {
+  width: 100%;
+  height: calc(100vh - 100px);
+  overflow: hidden;
+}
+
+.slide {
+  position: relative;
+  height: calc(100vh - 100px);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(65%); /* escurece um pouco a imagem pra destacar o texto */
+}
+
+/* Texto e overlay */
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  width: 90%;
+  max-width: 800px;
+  padding: 0 1rem;
+}
+
+.overlay h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #f5e536; /* amarelo do logo */
+}
+
+.overlay p {
+  font-size: 1.2rem;
+  color: #f0f0f0;
+  margin-bottom: 2rem;
+}
+
+.ctaButton {
+  background: linear-gradient(to right, #012c6d, #0251b8);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+  background: linear-gradient(to right, #0251b8, #0267eb);
+  transform: scale(1.05);
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .overlay h1 {
+    font-size: 2.2rem;
+  }
+  .overlay p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .overlay h1 {
+    font-size: 1.8rem;
+  }
+  .overlay p {
+    font-size: 0.95rem;
+  }
+  .ctaButton {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .overlay {
+    top: 55%;
+  }
+  .overlay h1 {
+    font-size: 1.5rem;
+  }
+  .overlay p {
+    font-size: 0.85rem;
+  }
+}

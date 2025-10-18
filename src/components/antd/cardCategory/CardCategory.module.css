@@ -1,0 +1,12 @@
+.imgWrapper {
+  overflow: hidden;      
+}
+
+.imgCategory {
+    transition: 0.3s all ease-in-out;
+    object-fit: cover;
+    width: 100%;
+}
+.imgCategory:hover {
+    transform: scale(1.02);
+}

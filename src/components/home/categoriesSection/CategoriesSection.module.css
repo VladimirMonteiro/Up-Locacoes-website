@@ -1,0 +1,40 @@
+.categoriesSection {
+  margin: 80px 0;
+}
+
+.categoriesSection h2 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  margin-top: 60px;
+  text-align: center;
+}
+
+.categoriesContainer {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 16px;
+  overflow-x: auto; /* permite scroll lateral */
+  scroll-behavior: smooth;
+  padding: 12px 8px;
+  -webkit-overflow-scrolling: touch; /* rolagem suave em iOS */
+  color: #012c6d;
+
+  /* Corrige o problema da primeira categoria no mobile */
+  justify-content: flex-start; 
+}
+
+/* Oculta a barra de rolagem no mobile (opcional) */
+.categoriesContainer::-webkit-scrollbar {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .categoriesSection {
+    overflow-x: visible; /* no desktop, desativa scroll */
+  }
+
+  .categoriesContainer {
+    flex-wrap: wrap; /* organiza em múltiplas linhas */
+    justify-content: center; /* centraliza no desktop */
+  }
+}

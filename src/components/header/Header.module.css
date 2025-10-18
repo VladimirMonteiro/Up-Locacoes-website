@@ -1,0 +1,108 @@
+header {
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to right, #012c6d, #0251b8, #0267eb);
+}
+
+header h1 {
+  color: yellow;
+  font-weight: bold;
+  padding: 29px 0px;
+}
+
+header a {
+  text-decoration: none;
+  color: yellow;
+}
+
+.center {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+header ul {
+  display: flex;
+  justify-content: flex-end;
+  padding: 40px 15px;
+}
+header ul li {
+  list-style: none;
+  margin-left: 30px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.center ul li a {
+  color: white;
+}
+/* Estilizando o elemento */
+.hovverEffect {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 3px; /* Adicionando espaço para a borda inferior crescer */
+  text-decoration: none;
+  color: #333; /* Cor do texto normal */
+}
+
+/* Adicionando a borda inferior inicial */
+.hovverEffect::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px; /* Altura da borda inferior */
+  background-color: yellow; /* Cor da borda */
+  transition: width 0.3s ease; /* Transição suave da largura */
+}
+
+/* Efeito hover - aumentando a largura da borda inferior */
+.hovverEffect:hover::before {
+  width: 100%; /* Largura da borda inferior quando hover */
+}
+
+.menuMobile {
+  display: none;
+  background-image: url("../../assets/menu.png");
+  background-repeat: no-repeat;
+  margin: 29px 0;
+  width: 37px;
+  height: 37px;
+  cursor: pointer;
+}
+.menuMobile ul {
+  height: 190px;
+  background-color: rgba(21, 81, 192, 0.788);
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 100px;
+  color: white;
+  list-style-type: none;
+  text-align: center;
+  z-index: 2;
+}
+
+.menuMobile ul li {
+  margin: 10px 0;
+  padding-bottom: 4px;
+  border-bottom: 1px solid yellow;
+}
+
+@media screen and (max-width: 768px) {
+  .menuDesktop {
+    display: none;
+  }
+
+  .menuMobile {
+    display: block;
+  }
+
+  .menuMobile ul {
+    display: block;
+  }
+}

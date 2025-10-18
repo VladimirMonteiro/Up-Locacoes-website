@@ -1,0 +1,62 @@
+.menuIcon {
+  width: 32px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.menuIcon:hover {
+  transform: scale(1.1);
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 20px 0;
+}
+
+.nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.nav li {
+  margin-bottom: 20px;
+}
+
+.link {
+  display: block;
+  width: 100%;
+  font-size: 1.1rem;
+  color: #333;
+  text-decoration: none;
+  padding: 10px 0;
+  border-left: 4px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.link:hover {
+  color: #0077ff;
+  border-left: 4px solid #0077ff;
+  background-color: rgba(0, 119, 255, 0.05);
+  padding-left: 12px;
+}
+
+.whatsapp {
+  color: #1ebe57;
+  font-weight: 600;
+}
+
+.whatsapp:hover {
+  border-left-color: #1ebe57;
+  background-color: rgba(30, 190, 87, 0.08);
+}
+
+/* Responsivo */
+@media (max-width: 500px) {
+  .link {
+    font-size: 1rem;
+  }
+}

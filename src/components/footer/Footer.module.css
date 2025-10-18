@@ -1,0 +1,130 @@
+/* Footer geral */
+footer {
+  width: 100%;
+  background: linear-gradient(180deg, #012c6d 0%, #0251b8 100%);
+  color: white;
+  border-top: 2px solid #FFD700; /* dourado */
+  font-family: 'Arial', sans-serif;
+}
+
+/* Container central */
+.footerCenter {
+  max-width: 1250px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 40px 20px;
+  gap: 40px;
+}
+
+/* Logo */
+.logo {
+  flex: 1 1 200px;
+  max-width: 250px;
+}
+
+.logo img {
+  width: 100%;
+  display: block;
+}
+
+/* Seções */
+footer div {
+  flex: 1 1 150px;
+  min-width: 150px;
+}
+
+footer h3 {
+  margin-bottom: 12px;
+  font-size: 18px;
+  color: #FFD700;
+}
+
+/* Listas */
+footer ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #FFD700;
+}
+
+footer span a {
+  color: #012c6d;
+  font-weight: bold;
+  transition: border-bottom 0.3s ease;
+}
+
+footer span a:hover {
+  border-bottom: 1px solid #012c6d;
+}
+
+/* Redes sociais */
+.redesSociais ul {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.redesSociais ul li {
+  font-size: 28px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.redesSociais ul li:hover {
+  color: #FFD700;
+  transform: scale(1.2);
+}
+
+/* Subfooter */
+.subFooter {
+  background-color: #f8f8f8;
+  color: #555555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  padding: 10px 2%;
+  text-align: center;
+  font-size: 14px;
+}
+
+.subFooter span {
+  color: #012c6d;
+  font-weight: bold;
+}
+
+/* Responsividade */
+@media screen and (max-width: 850px) {
+  .footerCenter {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    padding: 30px 20px;
+  }
+
+  .logo {
+    max-width: 200px;
+    margin-bottom: 20px;
+  }
+
+  footer div {
+    flex: 1 1 100%;
+  }
+
+  .redesSociais ul {
+    justify-content: center;
+  }
+}
