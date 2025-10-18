@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./WhyUsSection.module.css";
-import imageTest from "../../../assets/testImage2.png";
+import imageTest from "../../../assets/testeImage2.png";
 
 const WhyUsSection = () => {
   const sectionRef = useRef(null);
