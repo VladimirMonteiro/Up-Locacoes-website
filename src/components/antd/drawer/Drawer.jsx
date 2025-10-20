@@ -30,7 +30,7 @@ const DrawerComponent = () => {
               </Link>
             </li>
             <li>
-              <Link to="/produtos" onClick={onClose} className={styles.link}>
+              <Link to="/ferramentas" onClick={onClose} className={styles.link}>
                 Produtos
               </Link>
             </li>

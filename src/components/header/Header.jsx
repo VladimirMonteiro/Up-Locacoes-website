@@ -1,19 +1,15 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
 
 import styles from "./Header.module.css";
 import DrawerComponent from "../antd/drawer/Drawer";
+import logoUp from "../../assets/logo_up.png";
 
 const Header = () => {
- 
   return (
     <header>
       <div className={styles.center}>
-        <h1>
-          <a href="/" style={{ color: "yellow" }}>
-            Up Locações{" "}
-          </a>
-        </h1>
+        <div className={styles.logoContainer}><img src={logoUp} alt="Up Locações" /></div>
+
         <nav className={styles.menuDesktop}>
           <ul>
             <li>

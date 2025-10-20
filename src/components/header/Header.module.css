@@ -4,6 +4,16 @@ header {
   background: linear-gradient(to right, #012c6d, #0251b8, #0267eb);
 }
 
+.logoContainer {
+  width: 130px;
+  height: 130px;
+  z-index: 3;
+}
+
+.logoContainer img {
+  width: 100%;
+}
+
 header h1 {
   color: yellow;
   font-weight: bold;
@@ -17,6 +27,8 @@ header a {
 
 .center {
   max-width: 1280px;
+  height: 100px;
+  align-items: center;
   margin: 0 auto;
   padding: 0 2%;
   display: flex;
