@@ -9,10 +9,7 @@ const ServicesSection = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect(); // dispara só uma vez
-        }
+        setIsVisible(entry.isIntersecting);
       },
       { threshold: 0.2 }
     );
@@ -27,7 +24,7 @@ const ServicesSection = () => {
   return (
     <section
       ref={sectionRef}
-      className={`${styles.servicesSection} ${isVisible ? styles.fadeIn : ""}`}
+      className={`${styles.servicesSection} ${isVisible ? styles.fadeIn : styles.fadeOut}`}
     >
       <h2>Conheça nossos serviços</h2>
       <div className={styles.center}>

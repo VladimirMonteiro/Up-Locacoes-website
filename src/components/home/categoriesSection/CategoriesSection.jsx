@@ -5,8 +5,12 @@ import Category from "../../categories/Category";
 import betoneiraImg from "../../../assets/categoriesIcons/betoneiraIcon.png";
 import andaimeImg from "../../../assets/categoriesIcons/andaimeIcon.png";
 import compactadorIcon from "../../../assets/categoriesIcons/compactadorIcon.png";
-import elevacaoIcon from "../../../assets/categoriesIcons/elevacaoIcon.png";
-
+import jardinagemIcon from "../../../assets/categoriesIcons/jardinagemIcon.png";
+import limpezaIcon from "../../../assets/categoriesIcons/limpezaIcon.png";
+import furacaoDemolicaoIcon from "../../../assets/categoriesIcons/furacaoDemolicaoIcon.png";
+import eletricosIcon from "../../../assets/categoriesIcons/eletricosIcon.png";
+import geradorBombaIcon from "../../../assets/categoriesIcons/geradorBombaIcon.png";
+import outrosIcon from "../../../assets/categoriesIcons/outrosIcon.png";
 
 const CategoriesSection = () => {
   return (
@@ -16,12 +20,12 @@ const CategoriesSection = () => {
         <Category name="Concretagem" img={betoneiraImg} />
         <Category name="Elevação" img={andaimeImg} />
         <Category name="Compactação" img={compactadorIcon} />
-        <Category name="Jardinagem" img={betoneiraImg} />
-        <Category name="Limpeza" img={betoneiraImg} />
-        <Category name="Furação e demolição" img={betoneiraImg} />
-        <Category name="Elétricos" img={betoneiraImg} />
-        <Category name="Gerador e bombas" img={betoneiraImg} />
-        <Category name="Outros" img={betoneiraImg} />
+        <Category name="Jardinagem" img={jardinagemIcon} />
+        <Category name="Limpeza" img={limpezaIcon} />
+        <Category name="Furação e demolição" img={furacaoDemolicaoIcon} />
+        <Category name="Elétricos" img={eletricosIcon} />
+        <Category name="Gerador e bombas" img={geradorBombaIcon} />
+        <Category name="Outros" img={outrosIcon} />
       </div>
     </section>
   );

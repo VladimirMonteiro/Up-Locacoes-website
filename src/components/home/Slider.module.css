@@ -1,66 +1,84 @@
+/* ===== Estrutura do Slider ===== */
 .slider {
   width: 100%;
-  height: calc(100vh - 100px);
-  overflow: hidden;
+  
 }
 
 .slide {
   position: relative;
-  height: calc(100vh - 100px);
 }
 
+/* ===== Imagem ===== */
 .image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(65%); /* escurece um pouco a imagem pra destacar o texto */
+  object-position: center;
+  filter: brightness(65%);
+  transition: transform 1.8s ease, filter 0.5s ease;
 }
 
-/* Texto e overlay */
+/* Efeito leve de zoom no autoplay */
+.slide.slick-active .image {
+  transform: scale(1.05);
+}
+
+/* ===== Overlay (Texto e Botão) ===== */
 .overlay {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #fff;
   text-align: center;
+  color: #fff;
   width: 90%;
   max-width: 800px;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
+  z-index: 2;
 }
 
 .overlay h1 {
-  font-size: 3rem;
+  font-size: clamp(2rem, 5vw, 3rem); /* Escala fluida */
   font-weight: 700;
   margin-bottom: 1rem;
   color: #f5e536; /* amarelo do logo */
+  line-height: 1.2;
 }
 
 .overlay p {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
   color: #f0f0f0;
   margin-bottom: 2rem;
+  line-height: 1.4;
 }
 
+/* ===== Botão ===== */
 .ctaButton {
   background: linear-gradient(to right, #012c6d, #0251b8);
   color: #fff;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   padding: 0.8rem 2rem;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 .ctaButton:hover {
   background: linear-gradient(to right, #0251b8, #0267eb);
   transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
 }
 
-/* Responsividade */
+/* ===== Responsividade ===== */
+
+/* Tablets */
 @media (max-width: 1024px) {
+  .overlay {
+    max-width: 600px;
+  }
   .overlay h1 {
     font-size: 2.2rem;
   }
@@ -69,27 +87,44 @@
   }
 }
 
+/* Smartphones médios */
 @media (max-width: 768px) {
+  .overlay {
+    top: 55%;
+    max-width: 90%;
+    padding: 0 1rem;
+  }
+
   .overlay h1 {
     font-size: 1.8rem;
   }
+
   .overlay p {
     font-size: 0.95rem;
   }
+
   .ctaButton {
     padding: 0.6rem 1.5rem;
     font-size: 0.9rem;
   }
 }
 
+/* Smartphones pequenos */
 @media (max-width: 480px) {
   .overlay {
-    top: 55%;
+    top: 60%;
   }
+
   .overlay h1 {
     font-size: 1.5rem;
   }
+
   .overlay p {
+    font-size: 0.85rem;
+  }
+
+  .ctaButton {
+    padding: 0.5rem 1.2rem;
     font-size: 0.85rem;
   }
 }

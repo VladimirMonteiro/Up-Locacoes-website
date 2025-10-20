@@ -9,12 +9,9 @@ const WhyUsSection = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect(); // anima só uma vez
-        }
+        setIsVisible(entry.isIntersecting);
       },
-      { threshold: 0.2 } // 20% visível já ativa
+      { threshold: 0.2 } // 20% visível ativa
     );
 
     if (sectionRef.current) {
@@ -27,7 +24,7 @@ const WhyUsSection = () => {
   return (
     <section
       ref={sectionRef}
-      className={`${styles.whyUsSection} ${isVisible ? styles.fadeIn : ""}`}
+      className={`${styles.whyUsSection} ${isVisible ? styles.fadeIn : styles.fadeOut}`}
     >
       <div className={styles.centerWhyUs}>
         <div className={styles.textContainer}>

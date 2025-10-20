@@ -16,15 +16,10 @@ const CategoriesMostSection = () => {
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsVisible(true);
-            observer.disconnect();
-          }
-        });
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
       },
-      { threshold: 0.3 }
+      { threshold: 0.2 }
     );
 
     if (sectionRef.current) observer.observe(sectionRef.current);
@@ -34,7 +29,9 @@ const CategoriesMostSection = () => {
   return (
     <section
       ref={sectionRef}
-      className={`${styles.categoriesMostSection} ${isVisible ? styles.fadeInUp : ""}`}
+      className={`${styles.categoriesMostSection} ${
+        isVisible ? styles.fadeInUp : styles.fadeOutDown
+      }`}
     >
       <h2>Equipamentos mais populares</h2>
       <div className={styles.popularCardsContainer}>
