@@ -19,7 +19,7 @@ const CategoriesMostSection = () => {
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
       },
-      { threshold: 0.2 }
+      { threshold: 0.01 }
     );
 
     if (sectionRef.current) observer.observe(sectionRef.current);
